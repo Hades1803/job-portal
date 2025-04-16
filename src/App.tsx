@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FindJobs from './Pages/FindJobs';
 import Header from './Header/Header';
 import { Footer } from './Footer/Footer';
+import FindTalents from './Pages/FindTalents';
+import TalentProfilePage from './Pages/TalentProfilePage';
 export default function App() {
   const theme = createTheme({
     colors: {
@@ -24,6 +26,8 @@ export default function App() {
       <Header/>
       <Routes>
         <Route path='/find-jobs' element={<FindJobs/>}/>
+        <Route path='/find-talents' element={<FindTalents/>}/>
+        <Route path='/talent-profile' element={<TalentProfilePage/>}/>
         <Route path='*' element={<HomePage/>}/>
       </Routes>
       <Footer/>

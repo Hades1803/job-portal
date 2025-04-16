@@ -88,7 +88,7 @@ export function MultiInput(props:any) {
           onChange={(event) => setSearch(event.currentTarget.value)}
           placeholder="Search groceries"
         />
-        <Combobox.Options>
+        <Combobox.Options style={{ maxHeight: 200, overflowY: 'auto' }}>
           {options}
 
           {!exactOptionMatch && search.trim().length > 0 && (
