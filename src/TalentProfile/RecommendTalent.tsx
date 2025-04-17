@@ -4,7 +4,7 @@ import TalentCard from '../FindTalent/TalentCard'
 
 const RecommendTalent = () => {
   return (
-   <div>
+   <div className='ml-20'>
      <div className='text-xl font-semibold mb-5 mt-2'>Recommend Talent</div>
      <div className='flex flex-col gap-5 flex-wrap'>
         {

@@ -5,9 +5,10 @@ import { IconSelector } from '@tabler/icons-react';
 
 
 export function MultiInput(props:any) {
-  useEffect(()=>{
-      setData(props.options)
-  },[])
+  useEffect(() => {
+    setData(props.options);
+  }, [props.options]);
+  
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
     onDropdownOpen: () => combobox.updateSelectedOptionIndex('active'),

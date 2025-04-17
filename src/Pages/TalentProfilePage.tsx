@@ -8,12 +8,11 @@ import RecommendTalent from '../TalentProfile/RecommendTalent'
 const TalentProfilePage = () => {
     return (
         <div className='min-h-[100vh] bg-mine-shaft-950 font-["poppins"] p-4'>
-            <Divider size="xs"/>
             <Link to='/find-talents' className='my-4 inline-block'>
                 <Button color='brightSun.4' variant='outline' leftSection={<IconArrowLeft size={20}/>}>Back</Button>
             </Link>
             <Divider size="xs"/>
-            <div className='flex gap-5 justify-around'>
+            <div className='flex gap-5'>
                 <Profile {...profile}/>
                 <RecommendTalent/>
             </div>

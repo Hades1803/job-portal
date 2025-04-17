@@ -1,5 +1,4 @@
-import { IconBookmark } from '@tabler/icons-react'
-import React from 'react'
+
 
 const ExpCard = (props:any) => {
   return (
