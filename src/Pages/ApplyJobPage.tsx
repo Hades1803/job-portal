@@ -1,5 +1,4 @@
-import React from 'react'
-import PostJob from '../PostJob/PostJob'
+
 import { Link } from 'react-router-dom'
 import { Button } from '@mantine/core'
 import { IconArrowLeft } from '@tabler/icons-react'

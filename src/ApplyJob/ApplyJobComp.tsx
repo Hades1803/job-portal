@@ -1,6 +1,6 @@
 import { Button, Divider, FileInput, LoadingOverlay, Notification, NumberInput, Textarea, TextInput } from '@mantine/core'
 import { IconCheck, IconPaperclip } from '@tabler/icons-react'
-import React, { use, useState } from 'react'
+import  {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const ApplyJobComp = () => {
@@ -18,7 +18,7 @@ const ApplyJobComp = () => {
         setInterval(() => {
             x--;
             setSec(x);
-            if (x == 0)
+            if (x === 0)
                 navigate("/find-jobs")
         }, 1000)
     }

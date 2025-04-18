@@ -12,6 +12,10 @@ import PostJobPage from './Pages/PostJobPage';
 import '@mantine/tiptap/styles.css';
 import JobDescPage from './Pages/JobDescPage';
 import ApplyJobPage from './Pages/ApplyJobPage';
+import CompanyPage from './Pages/CompanyPage';
+import '@mantine/dates/styles.css';
+import PostedJobPage from './Pages/PostedJobPage';
+import JobHistoryPage from './Pages/JobHistoryPage';
 export default function App() {
   const theme = createTheme({
     focusRing: 'never',
@@ -37,8 +41,11 @@ export default function App() {
             <Route path='/find-jobs' element={<FindJobs />} />
             <Route path='/find-talents' element={<FindTalents />} />
             <Route path='/jobs' element={<JobDescPage />} />
+            <Route path='/company' element={<CompanyPage />} />
             <Route path='/apply-job' element={<ApplyJobPage />} />
             <Route path='/post-job' element={<PostJobPage />} />
+            <Route path='/posted-job' element={<PostedJobPage />} />
+            <Route path='/job-history' element={<JobHistoryPage />} />
             <Route path='/talent-profile' element={<TalentProfilePage />} />
             <Route path='*' element={<HomePage />} />
           </Routes>
