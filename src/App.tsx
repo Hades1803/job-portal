@@ -11,11 +11,12 @@ import TalentProfilePage from './Pages/TalentProfilePage';
 import PostJobPage from './Pages/PostJobPage';
 import '@mantine/tiptap/styles.css';
 import JobDescPage from './Pages/JobDescPage';
+import ApplyJobPage from './Pages/ApplyJobPage';
 export default function App() {
   const theme = createTheme({
-    focusRing:'never',
-    primaryColor:'brightSun',
-    primaryShade:4,
+    focusRing: 'never',
+    primaryColor: 'brightSun',
+    primaryShade: 4,
     colors: {
       brightSun: [
         '#fffbeb', '#fff3c6', '#ffe588', '#ffd149', '#ffbd20', '#f99b07', '#dd7302', '#b75006', '#943c0c', '#7a330d', '#461902'
@@ -24,23 +25,26 @@ export default function App() {
         '#f6f6f6', '#e7e7e7', '#d1d1d1', '#b0b0b0', '#888888', '#6d6d6d', '#5d5d5d', '#4f4f4f', '#454545', '#3d3d3d', '#2d2d2d'
       ]
     },
-    fontFamily:'poppins,sans-serif'
+    fontFamily: 'poppins,sans-serif'
   });
   return (
     <MantineProvider defaultColorScheme='dark' theme={theme}>
       <BrowserRouter>
-      <Header/>
-      <Divider size="xs" mx="md"/>
-      <Routes>
-        <Route path='/find-jobs' element={<FindJobs/>}/>
-        <Route path='/find-talents' element={<FindTalents/>}/>
-        <Route path='/jobs' element={<JobDescPage/>}/>
-        <Route path='/post-job' element={<PostJobPage/>}/>
-        <Route path='/talent-profile' element={<TalentProfilePage/>}/>
-        <Route path='*' element={<HomePage/>}/>
-      </Routes>
-      <Divider size="xs" mx="md"/>
-      <Footer/>
+        <div className='relative'>
+          <Header />
+          <Divider size="xs" mx="md" />
+          <Routes>
+            <Route path='/find-jobs' element={<FindJobs />} />
+            <Route path='/find-talents' element={<FindTalents />} />
+            <Route path='/jobs' element={<JobDescPage />} />
+            <Route path='/apply-job' element={<ApplyJobPage />} />
+            <Route path='/post-job' element={<PostJobPage />} />
+            <Route path='/talent-profile' element={<TalentProfilePage />} />
+            <Route path='*' element={<HomePage />} />
+          </Routes>
+          <Divider size="xs" mx="md" />
+          <Footer />
+        </div>
       </BrowserRouter>
     </MantineProvider>
   );

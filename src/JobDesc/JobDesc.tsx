@@ -2,10 +2,10 @@ import { ActionIcon, Button, Divider } from '@mantine/core'
 import { IconBookmark } from '@tabler/icons-react'
 import { Link } from 'react-router-dom'
 import { card, desc, skills } from '../Data/JobDescData'
-
+import DOMPurify from 'dompurify';
 
 const JobDesc = () => {
-    const data =desc;
+    const data = DOMPurify.sanitize(desc);
 
     return (
 
@@ -53,8 +53,27 @@ const JobDesc = () => {
                 </div>
             </div>
             <Divider my="xl" />
-            <div dangerouslySetInnerHTML={{__html:data}}>
+            <div className='[&_h4]:text-xl [&_h4]:my-5 [&_h4]:font-semibold [&_h4]:text-mine-shaft-200 [&_p]:text-justify [&_*]:text-mine-shaft-300 [&_li]:marker:text-bright-sun-400 [&_li]:mb-1' dangerouslySetInnerHTML={{ __html: data }}>
 
+            </div>
+            <Divider my="xl" />
+            <div>
+                <div className='text-xl font-semibold mb-5'>About Company</div>
+                <div>
+                    <div className='flex justify-between mb-3'>
+                        <div className='flex gap-2 items-center'>
+                            <div className='p-3 bg-mine-shaft-800 rounded-xl'><img src="/Companies/Amazon.png" alt="" className='h-8 w-8' /></div>
+                            <div className='flex flex-col'>
+                                <div className='font-medium text-lg'>Google</div>
+                                <div className='text-lg text-mine-shaft-300'>10k+ Employees</div>
+                            </div>
+                        </div>
+                            <Link to='/'>
+                                <Button color='brightSun.4' variant='light'>Comoany Page</Button>
+                            </Link>
+                    </div>
+                    <div className='text-mine-shaft-300 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aut sint nisi ipsa temporibus. Fugit debitis possimus provident nobis ipsa? Voluptatibus perferendis temporibus earum possimus voluptas quia cupiditate eum impedit doloribus at laudantium, nisi officiis, quo quas tempore incidunt maxime, expedita tempora iusto sapiente? Quam eius amet, esse, ducimus nostrum quasi iste voluptas sint beatae minus fugiat, saepe cum corrupti.</div>
+                </div>
             </div>
         </div>
     )
