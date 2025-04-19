@@ -1,6 +1,5 @@
 import { Button, Divider } from '@mantine/core'
 import { IconBriefcase, IconMapPin } from '@tabler/icons-react'
-import React from 'react'
 import ExpCard from './ExpCard'
 import CertificationCard from './CertificationCard'
 

@@ -1,9 +1,12 @@
 import { IconAnchor, IconBrandFacebook, IconBrandGithub, IconBrandInstagram } from "@tabler/icons-react"
 import { footerLinks } from "../Data/Data"
+import { useLocation } from "react-router-dom";
 
 
 export const Footer = () => {
+    const location = useLocation();
     return (
+        location.pathname !== "/signup" && location.pathname !== "/login" ?
         <div className="bg-mine-shaft-950 font-['poppins']">
             <div className="pt-20 pb-5 flex gap-5 justify-around ">
                 <div className="w-1/4 flex flex-col gap-4">
@@ -38,7 +41,7 @@ export const Footer = () => {
             <div className="mt-20 py-5 border-t border-bright-sun-400">
                 <div className="text-center text-mine-shaft-100">Designed & Developed By <span className="text-bright-sun-400 hover:underline hover:cursor-pointer">Nguyen Anh Quoc</span></div>
             </div>
-        </div>
+        </div>:<></>
 
     )
 }
